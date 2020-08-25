@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>UIC Map</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>This is<br />
+						Massively</h1>
+						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
+						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+
+
+
+
+
+
+					<html>
+    <head>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <title>Interactive Map</title>
+        <body>
+            <h1>Map</h1>
+        </body>
+    </head>
+    <body>
+        <h1>Map</h1>
+        <div id='map' style='width: 800px; height: 700px;'></div>
+        <script>
+        
+	mapboxgl.accessToken = 'pk.eyJ1IjoiaWFrdXJ6YSIsImEiOiJja2RnZTAwNjQwcHBiMzBwZmV3MGMwYm0yIn0.zNe6Asj_Su9c0oqGjq169g';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center:[-87.649639,41.869794],
+        zoom: 13
+    });
+
+    map.on('load', function() {
+        map.addSource('redblock', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.656768,41.874351],[-87.647212,41.874307],[-87.646950,41.867208],[-87.656651,41.866961],[-87.656768,41.87435]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': 'redblock',
+        'type': 'fill',
+        'source': 'redblock',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#ffd3c9',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', 'redblock', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIj0IqRNeWVg-4Ok_cA-Hl1VyLg9k25WvjflboLyiu49RqsMZbeHqcCuphIK7tE0G-UinbCC7pJf_D/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'redblock', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'redblock', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+//------------------------------------  
+  
+
+
+        </script>
+
+	</body>
+	
+
+
+
+
+
+
+
+</html>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+
+	</body>
+</html>
