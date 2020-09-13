@@ -538,9 +538,42 @@ map.on('mouseleave', '20uic4', function() {
     });
 //marker ----------------------- 
 
-var marker = new mapboxgl.Marker()
-.setLngLat([-87.650497,41.871967])
-.addTo(map);
+//marker ----------------------- 
+
+map.on('load', function () {
+map.loadImage(
+'https://upload.wikimedia.org/wikipedia/commons/f/fa/CAMP.CIRC.LG.RED.png',
+function (error, image) {
+if (error) throw error;
+map.addImage('UIClogo', image);
+map.addSource('point', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [-87.650479,41.871870]
+}
+}
+]
+}
+});
+map.addLayer({
+'id': 'points',
+'type': 'symbol',
+'source': 'point',
+'layout': {
+'icon-image': 'UIClogo',
+'icon-size': 0.03
+ 
+}
+});
+}
+);
+});
  
   
 
