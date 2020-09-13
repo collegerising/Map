@@ -44,12 +44,14 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/iakurza/cked1f0no10pf19nzp3g3xmgq',
-        center:[-87.649639,41.869794],
+        center:[ -87.650479,41.871870],
         zoom: 13
     });
 
+//5uic ----------------------------
+
     map.on('load', function() {
-        map.addSource('redblock', {
+        map.addSource('5uic', {
             'type': 'geojson',
             'data': {
                 'type': 'Feature',
@@ -57,7 +59,7 @@
                     'type': 'Polygon',
                     'coordinates': [[
                         
-                            [-87.656768,41.874351],[-87.647212,41.874307],[-87.646950,41.867208],[-87.656651,41.866961],[-87.656768,41.87435]
+                            [-87.652585,41.873536],[-87.648442,41.873536],[-87.648297,41.870565],[-87.652514,41.870565],[-87.652585,41.873536]
                         ]
                   ]
                     
@@ -66,20 +68,20 @@
         });
           
        map.addLayer({
-        'id': 'redblock',
+        'id': '5uic',
         'type': 'fill',
-        'source': 'redblock',
+        'source': '5uic',
         'layout': {},
         'paint': {
             'fill-outline-color': '#ffffff',
-            'fill-color': '#ffd3c9',
+            'fill-color': '#5190e7',
             'fill-opacity': 0.2
           
         }
     });      
            
       
-map.on('click', 'redblock', function(e) {
+map.on('click', '5uic', function(e) {
  new mapboxgl.Popup()
   .setLngLat(e.lngLat)
   .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIj0IqRNeWVg-4Ok_cA-Hl1VyLg9k25WvjflboLyiu49RqsMZbeHqcCuphIK7tE0G-UinbCC7pJf_D/pubhtml?widget=true&amp;headers=false"></iframe>')
@@ -89,17 +91,457 @@ map.on('click', 'redblock', function(e) {
 });
 
 // Change the cursor to a pointer when the mouse is over the states layer.
-map.on('mouseenter', 'redblock', function() {
+map.on('mouseenter', '5uic', function() {
  map.getCanvas().style.cursor = 'pointer';
 
 });
 
 // Change it back to a pointer when it leaves.
-map.on('mouseleave', 'redblock', function() {
+map.on('mouseleave', '5uic', function() {
  map.getCanvas().style.cursor = '';
 });
     });
-//------------------------------------  
+
+
+//10 uic left------------------------------------  
+
+ map.on('load', function() {
+        map.addSource('10uic1', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.656872,41.870565],[-87.652514,41.870565],[-87.652585,41.873536],[-87.657072,41.873536],[-87.656872,41.870565]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '10uic1',
+        'type': 'fill',
+        'source': '10uic1',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#008000',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '10uic1', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3lHChKPZN0AuXSADNKx_3XD79pGw6zve71SgKShQS3aFqri6ejzpviI4OawmLYxD4ogPn7ObpLnCq/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '10uic1', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '10uic1', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//10uictop--------------------------------
+
+map.on('load', function() {
+        map.addSource('10uic2', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.657072,41.873536],[-87.657072,41.874533],[-87.645394,41.874533],[-87.645394,41.873536],[-87.657072,41.873536]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '10uic2',
+        'type': 'fill',
+        'source': '10uic2',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#008000',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '10uic2', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3lHChKPZN0AuXSADNKx_3XD79pGw6zve71SgKShQS3aFqri6ejzpviI4OawmLYxD4ogPn7ObpLnCq/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '10uic2', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '10uic2', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//10uicright ----------------------------
+
+    map.on('load', function() {
+        map.addSource('10uic3', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.648442,41.873536],[-87.645394,41.873536],[-87.645384,41.870568],[-87.648297,41.870568],[-87.648442,41.873536]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '10uic3',
+        'type': 'fill',
+        'source': '10uic3',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#008000',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '10uic3', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3lHChKPZN0AuXSADNKx_3XD79pGw6zve71SgKShQS3aFqri6ejzpviI4OawmLYxD4ogPn7ObpLnCq/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '10uic3', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '10uic3', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//10uicbottom ----------------------------
+
+    map.on('load', function() {
+        map.addSource('10uic4', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.656872,41.870565],[-87.656872,41.869975],[-87.645394,41.869975],[-87.645394,41.870565],[-87.656872,41.870565]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '10uic4',
+        'type': 'fill',
+        'source': '10uic4',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#008000',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '10uic4', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3lHChKPZN0AuXSADNKx_3XD79pGw6zve71SgKShQS3aFqri6ejzpviI4OawmLYxD4ogPn7ObpLnCq/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '10uic4', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '10uic4', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//15-20 uic top---------------
+
+
+    map.on('load', function() {
+        map.addSource('20uic1', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.666272,41.877606],[-87.638402,41.877606],[-87.638402,41.874533],[-87.666272,41.874533],[-87.666272,41.877606]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '20uic1',
+        'type': 'fill',
+        'source': '20uic1',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#0000FF',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '20uic1', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTRAOpTk-ZK5kNyz7tqJuQH8N8c28fYKKxza7GCyelv1za9Al1OCnIF-1NQ7RmAlUO2QoU94JUUeUvn/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '20uic1', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '20uic1', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//15-20 uic left---------------
+
+
+    map.on('load', function() {
+        map.addSource('20uic2', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.666272,41.874533],[-87.657072,41.874533],[-87.656872,41.869975],[-87.666272,41.869975],[-87.666272,41.874533]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '20uic2',
+        'type': 'fill',
+        'source': '20uic2',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#0000FF',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '20uic2', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTRAOpTk-ZK5kNyz7tqJuQH8N8c28fYKKxza7GCyelv1za9Al1OCnIF-1NQ7RmAlUO2QoU94JUUeUvn/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '20uic2', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '20uic2', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//15-20 uic right---------------
+    map.on('load', function() {
+        map.addSource('20uic3', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.638402,41.874533],[-87.645394,41.874533],[-87.645394,41.869975],[-87.638402,41.869975],[-87.638402,41.874533]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '20uic3',
+        'type': 'fill',
+        'source': '20uic3',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#0000FF',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '20uic3', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTRAOpTk-ZK5kNyz7tqJuQH8N8c28fYKKxza7GCyelv1za9Al1OCnIF-1NQ7RmAlUO2QoU94JUUeUvn/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '20uic3', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '20uic3', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+
+//15-20 uic bottom---------------
+
+
+    map.on('load', function() {
+        map.addSource('20uic4', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                    'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [[
+                        
+                            [-87.666272,41.869975],[-87.666272,41.866796],[-87.638402,41.866796],[-87.638402,41.869975],[-87.666272,41.869975]
+                        ]
+                  ]
+                    
+                }
+            }
+        });
+          
+       map.addLayer({
+        'id': '20uic4',
+        'type': 'fill',
+        'source': '20uic4',
+        'layout': {},
+        'paint': {
+            'fill-outline-color': '#ffffff',
+            'fill-color': '#0000FF',
+            'fill-opacity': 0.2
+          
+        }
+    });      
+           
+      
+map.on('click', '20uic4', function(e) {
+ new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<iframe width=100% height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTRAOpTk-ZK5kNyz7tqJuQH8N8c28fYKKxza7GCyelv1za9Al1OCnIF-1NQ7RmAlUO2QoU94JUUeUvn/pubhtml?widget=true&amp;headers=false"></iframe>')
+  
+  
+  .addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', '20uic4', function() {
+ map.getCanvas().style.cursor = 'pointer';
+
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', '20uic4', function() {
+ map.getCanvas().style.cursor = '';
+});
+    });
+//marker ----------------------- 
+
+var marker = new mapboxgl.Marker()
+.setLngLat([-87.650497,41.871967])
+.addTo(map);
+ 
   
 
 
